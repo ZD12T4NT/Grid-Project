@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans+Condensed:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.container {
+  display: grid; /*allows the contens to become a grid*/
+  grid-template-columns: repeat(4, 1fr); /*this puts each element in 4 colums*/
+  gap: 10px; /*puts 10px gap */
+}
+
+.container > div {
+  /*targets each direct div within this container*/
+  height: 210px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex; /*allows the items in the grid to center*/
+  flex-direction: column; /*returns the items to a vertical column*/
+  align-items: center; /*moves it center top*/
+  justify-content: center; /*moves the content to the center of the div*/
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.container > div:hover {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+h2 span {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+/*this selects the (1st) div and changes 1 to 3*/
+.container > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+.container > div:nth-of-type(6) {
+  grid-column: 3 / 5;
+}
+.container > div:nth-of-type(9) {
+  grid-column: 3 / 5;
+}
+
+.container > div:nth-of-type(10) {
+  grid-column: 1 / 3;
+}
+.bg1 {
+  background: url("./1.jpg"); /*allows each div that has bg1 to have this background*/
+}
+
+.bg2 {
+  background: url("clouds.jpg");
+}
